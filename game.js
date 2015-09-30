@@ -33,7 +33,12 @@ if (question3.toUpperCase() === "YES" ||
   alert("Wrong. I have a sister and 2 brothers.")
 }
 
+alert("Hi " + userName + "! " +
+  " You got " + tally +
+  " correct out of 3. \nThank you for playing.");
+//Edited to look a little better
 
+console.log('The players name: ' + userName)
 console.log('Question 1 response: ' + question1);
 console.log('Question 2 response: ' + question2);
 console.log('Question 3 response: ' + question3);
