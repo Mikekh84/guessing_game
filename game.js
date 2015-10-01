@@ -37,6 +37,7 @@ alert("Hi " + userName + "! " +
   " You got " + tally +
   " correct out of 3. \nThank you for playing.");
 //Edited to look a little better
+// edited to upload
 
 console.log('The players name: ' + userName)
 console.log('Question 1 response: ' + question1);
