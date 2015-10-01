@@ -1,41 +1,46 @@
+// define variables to display response on page
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
+
 var tally = 0; //This is the number they would have gotten correct
 
 var userName = prompt('Please enter your name')
-alert('Hi ' + userName +"!" + ' Welcome to my guessing game.')
+alert('Hi ' + userName +'!' + ' Welcome to my guessing game.')
 
 function ques1() {
   var question1 = prompt('First Question. Have I lived outside the USA? Yes/No');
-  if (question1.toUpperCase() === "YES" ||
-      question1.toUpperCase() ==="Y" ||
-      question1.toUpperCase() === "YEAH"){
-    alert("Good Job! You got it right!");
+  if (question1.toUpperCase() === 'YES' ||
+      question1.toUpperCase() ==='Y' ||
+      question1.toUpperCase() === 'YEAH'){
+    one.innerHTML = 'Good Job! You got it right!';
     tally++;
   } else {
-      alert("You guessed wrong.");
+    one.innerHTML = 'You guessed wrong.';
   }
 }
 
 function ques2() {
   var question2 = prompt('Next question. Do you like spam? Yes/No');
-  if (question2.toUpperCase() === "YES" ||
-      question2.toUpperCase() ==="Y" ||
-      question2.toUpperCase() === "YEAH"){
-    alert("Awesome! Spam is great!");
+  if (question2.toUpperCase() === 'YES' ||
+      question2.toUpperCase() === 'Y' ||
+      question2.toUpperCase() === 'YEAH'){
+    two.innerHTML = 'Awesome! Spam is great!';
     tally++;
   } else {
-      alert("Wrong answer. Spam is great.");
+    two.innerHTML = 'Wrong answer. Spam is great.';
   }
 }
 
 function ques3() {
   var question3 = prompt('Final question. Do I have any siblings? Yes/No');
-  if (question3.toUpperCase() === "YES" ||
-      question3.toUpperCase() === "Y" ||
-      question3.toUpperCase() === "YEAH") {
-    alert("Correct! I have a sister and 2 brothers.");
+  if (question3.toUpperCase() === 'YES' ||
+      question3.toUpperCase() === 'Y' ||
+      question3.toUpperCase() === 'YEAH') {
+    three.innerHTML = 'Correct! I have a sister and 2 brothers.';
     tally++;
   } else {
-    alert("Wrong. I have a sister and 2 brothers.")
+    three.innerHTML = 'Wrong. I have a sister and 2 brothers.';
   }
 }
 
