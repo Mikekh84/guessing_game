@@ -19,9 +19,11 @@ function ques1() {
       question1.toUpperCase() === answers[1]) {
     one.innerHTML = 'Good Job! You got it right!';
     imgOne.innerHTML = "<img src = img/SKflag.jpeg width=200 />";
+    one.className = "right";
     tally++;
   } else {
     one.innerHTML = 'You guessed wrong.';
+    one.className = "wrong";
   }
   console.log('Question 1 response: ' + question1);
 }
@@ -32,9 +34,11 @@ function ques2() {
       question2.toUpperCase() === answers[1] ){
     two.innerHTML = 'Awesome! Spam is great!';
     imgTwo.innerHTML = "<img src = img/spam.jpeg width=200 />";
+    two.className = "right";
     tally++;
   } else {
     two.innerHTML = 'Wrong answer. Spam is great.';
+    two.className = "wrong";
   }
   console.log('Question 2 response: ' + question2);
 }
@@ -45,9 +49,11 @@ function ques3() {
       question3.toUpperCase() === answers[1] ) {
     three.innerHTML = 'Correct! I have a sister and 2 brothers.';
     imgThree.innerHTML = "<img src = img/family.jpg width=200 />";
+    three.className = "right";
     tally++;
   } else {
     three.innerHTML = 'Wrong. I have a sister and 2 brothers.';
+    three.className = "wrong";
   }
   console.log('Question 3 response: ' + question3);
 }
