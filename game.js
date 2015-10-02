@@ -4,6 +4,9 @@ var two = document.getElementById('two');
 var three = document.getElementById('three');
 var questions = ['First Question. Have I lived outside the USA? Yes/No', 'Next question. Do you like spam the food? Yes/No', 'Final question. Do I have any siblings? Yes/No']
 var answers = ['YES', 'Y', 'NO', 'N']
+var imgOne = document.getElementById('imgOne');
+var imgTwo = document.getElementById('imgTwo');
+var imgThree = document.getElementById('imgThree');
 
 var tally = 0; //This is the number they would have gotten correct
 
@@ -15,6 +18,7 @@ function ques1() {
   if (question1.toUpperCase() === answers[0] ||
       question1.toUpperCase() === answers[1]) {
     one.innerHTML = 'Good Job! You got it right!';
+    imgOne.innerHTML = "<img src = img/SKflag.jpeg width=200 />";
     tally++;
   } else {
     one.innerHTML = 'You guessed wrong.';
@@ -27,6 +31,7 @@ function ques2() {
   if (question2.toUpperCase() === answers[0] ||
       question2.toUpperCase() === answers[1] ){
     two.innerHTML = 'Awesome! Spam is great!';
+    imgTwo.innerHTML = "<img src = img/spam.jpeg width=200 />";
     tally++;
   } else {
     two.innerHTML = 'Wrong answer. Spam is great.';
@@ -39,6 +44,7 @@ function ques3() {
   if (question3.toUpperCase() === answers[0] ||
       question3.toUpperCase() === answers[1] ) {
     three.innerHTML = 'Correct! I have a sister and 2 brothers.';
+    imgThree.innerHTML = "<img src = img/family.jpg width=200 />";
     tally++;
   } else {
     three.innerHTML = 'Wrong. I have a sister and 2 brothers.';
@@ -47,8 +53,8 @@ function ques3() {
 }
 
 ques1();
-ques2();
-ques3();
+window.setTimeout(ques2, 2000);
+window.setTimeout(ques3, 2000);
 
 // alert("Hi " + userName + "! " +
 //   " You got " + tally +
